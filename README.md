@@ -58,6 +58,7 @@ intuitive_image:
   > images will be under the same folder with the post's published path. e.g.:
   >   1. post path is `/2021/archived/tips-for-google-search.html`, images of it will be in path `/2021/image-assets/`
   >   2. post path is `/tips-for-google-search.html`, images of it will be in path `/image-assets/`
-2. (no more questions in my mind😄
+2. Are all links will be handled?
+  > only relative links will be processed, https/http images or images' paths start with `/` will be ignored.
 
 If you got any questions or feature requests, feel free to [create an issue](https://github.com/oe/hexo-intuitive-image/issues/new).
