@@ -89,11 +89,12 @@ async function copyImage(src, dest, isDev) {
     await fs.ensureSymlink(src, dest)
   } else {
     if (stat) {
-      // remove linked file
-      if (stat.isSymlink) {
-        await fs.unlink(dest)
+      // exists and not symbol link
+      if (!stat.isSymlink) {
+        return
       }
-      return
+      // remove linked file
+      await fs.unlink(dest)
     }
     await fs.ensureDir(path.dirname(dest))
     await fs.copyFile(src, dest)
