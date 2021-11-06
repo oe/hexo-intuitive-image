@@ -1,4 +1,4 @@
-const isDev = process.env.npm_lifecycle_script === 'hexo server'
+const isDev = (process.env.npm_lifecycle_script || '').indexOf('hexo generate') === - 1
 const path = require('path')
 const fs = require('fs-extra')
 const crypto = require('crypto')
